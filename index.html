@@ -8,16 +8,23 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-        <link rel="stylesheet" href="style.css">
         <style type="text/tailwindcss">
             @theme {
               --color-light-blue: #F4F7FF;
               --color-primary: #3D5AFE;
               --color-c00303C: #00303C;
             }
+            @layer base {
+                :root {
+                    --font-poppins: "Poppins", sans-serif;
+                }
+                .font-poppins {
+                    font-family: var(--font-poppins);
+                }
+            }
         </style>
     </head>
-    <body class="px-4 pt-6 pb-16 poppins-font bg-light-blue">
+    <body class="px-4 pt-6 pb-16 font-poppins bg-light-blue">
         <header class="container p-6 mx-auto bg-white rounded-2xl">
             <nav class="flex flex-col items-center justify-between gap-6 sm:gap-0 sm:flex-row">
                 <div class="flex items-center gap-2.5">
@@ -34,7 +41,7 @@
                         <div>
                             <img src="img/checkbox.png" alt="">
                         </div>
-                        <p class="text-[32px] font-bold">23</p>
+                        <p class="text-[32px] font-bold" id="task-completed">23</p>
                     </li>
                     <li>
                         <button class="w-16 h-16 p-3 rounded-full cursor-pointer bg-light-blue" id="color-btn">
@@ -53,7 +60,7 @@
                         </div>
                         <div>
                             <p class="font-medium">Task Assigned</p>
-                            <h4 class="font-bold sm:text-3xl">05</h4>
+                            <h4 class="font-bold sm:text-3xl" id="task-assigned">6</h4>
                         </div>
                     </div>
                     <div class="lg:w-4/6 rounded-xl flex gap-2 sm:gap-6 items-center sm:px-10 px-4 py-5 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] cursor-pointer" id="discover-new-today">
@@ -74,18 +81,18 @@
                         </div>
                         <div>
                             <p class="sm:text-[22px]">
-                                <span class="block">Wed,</span>
-                                <span class="font-bold">Jul 28 2025</span>
+                                <span class="block" id="day">Wed,</span>
+                                <span class="font-bold" id="fullDate">Jul 28 2025</span>
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 px-6 py-8 sm:grid-cols-2 lg:grid-cols-3 gap-9">
-                    <div class="p-6 bg-light-blue rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl task-col">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
                             <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
-                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
-                            <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C task-title">Fix Mobile Button Issue</h3>
+                            <p class="p-4 bg-white rounded-lg text-[#808080]">Debug responsiveness, inspect styles, fix mobile button overl...</p>
                         </div>
                         <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
@@ -93,87 +100,87 @@
                                 <h4 class="font-medium text-c00303C">21 March 2025</h4>
                             </div>
                             <div>
-                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
+                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer task-completed disabled:bg-gray-300 disabled:text-gray-400 disabled:cursor-default">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 bg-light-blue rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl task-col">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
                             <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
-                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
-                            <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C task-title">Add Dark Mode</h3>
+                            <p class="p-4 bg-white rounded-lg text-[#808080]">Implement dark mode, update styles, ensure smooth the...</p>
                         </div>
                         <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">22 March 2025</h4>
                             </div>
                             <div>
-                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
+                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer task-completed disabled:bg-gray-300 disabled:text-gray-400 disabled:cursor-default">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 bg-light-blue rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl task-col">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
                             <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
-                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
-                            <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C task-title">Optimize  Home page</h3>
+                            <p class="p-4 bg-white rounded-lg text-[#808080]">Improve performance, enhance layout, optimize homepa...</p>
                         </div>
                         <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">23 March 2025</h4>
                             </div>
                             <div>
-                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
+                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer task-completed disabled:bg-gray-300 disabled:text-gray-400 disabled:cursor-default">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 bg-light-blue rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl task-col">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
                             <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
-                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
-                            <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C task-title">Add new emoji 🤲</h3>
+                            <p class="p-4 bg-white rounded-lg text-[#808080]">Insert new emoji, update UI, ensure proper renderi...</p>
                         </div>
                         <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">24 March 2025</h4>
                             </div>
                             <div>
-                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
+                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer task-completed disabled:bg-gray-300 disabled:text-gray-400 disabled:cursor-default">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 bg-light-blue rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl task-col">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
                             <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
-                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
-                            <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C task-title">Integrate OpenAI API</h3>
+                            <p class="p-4 bg-white rounded-lg text-[#808080]">Connect OpenAI API, enable AI features, ensure seamle...</p>
                         </div>
                         <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">25 March 2025</h4>
                             </div>
                             <div>
-                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
+                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer task-completed disabled:bg-gray-300 disabled:text-gray-400 disabled:cursor-default">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="p-6 bg-light-blue rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl task-col">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
                             <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
-                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
-                            <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C task-title">Improve Job searching</h3>
+                            <p class="p-4 bg-white rounded-lg text-[#808080]">Enhance job search, refine filters, optimize user experien...</p>
                         </div>
                         <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">26 March 2025</h4>
                             </div>
                             <div>
-                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
+                                <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer task-completed disabled:bg-gray-300 disabled:text-gray-400 disabled:cursor-default">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -187,13 +194,9 @@
                         </div>
                         <p class="text-xl font-medium">Activity Log</p>
                     </div>
-                    <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Clear History</button>
+                    <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer" id="clear-task-log-btn">Clear History</button>
                 </div>
-                <div class="p-6">
-                    <p class="bg-light-blue p-2.5 rounded-lg mb-7">You have completed the task "Add Dark Mode" at 12:48:15 PM</p>
-                    <p class="bg-light-blue p-2.5 rounded-lg mb-7">You have completed the task "Add Dark Mode" at 12:48:15 PM</p>
-                    <p class="bg-light-blue p-2.5 rounded-lg mb-7">You have completed the task "Add Dark Mode" at 12:48:15 PM</p>
-                </div>
+                <div class="p-6" id="activity-log-message-container"></div>
             </div>
         </main>
         <script src="script.js"></script>
