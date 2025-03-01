@@ -17,19 +17,19 @@
             }
         </style>
     </head>
-    <body class="poppins-font bg-light-blue pt-6 pb-16 px-4">
-        <header class="bg-white container mx-auto rounded-2xl p-6">
-            <nav class="flex justify-between items-center flex-col gap-6 sm:gap-0 sm:flex-row">
+    <body class="px-4 pt-6 pb-16 poppins-font bg-light-blue">
+        <header class="container p-6 mx-auto bg-white rounded-2xl">
+            <nav class="flex flex-col items-center justify-between gap-6 sm:gap-0 sm:flex-row">
                 <div class="flex items-center gap-2.5">
                     <div>
                         <img src="img/logo.png" alt="">
                     </div>
-                    <h3 class="sm:text-4xl text-2xl font-light flex gap-0">
+                    <h3 class="flex gap-0 text-2xl font-light sm:text-4xl">
                         Dev
                         <span class="font-bold">Board</span>
                     </h3>
                 </div>
-                <ul class="flex gap-9 items-center">
+                <ul class="flex items-center gap-9">
                     <li class="flex gap-4 bg-light-blue p-4 items-center rounded-full w-[123px] h-16 justify-center">
                         <div>
                             <img src="img/checkbox.png" alt="">
@@ -37,23 +37,23 @@
                         <p class="text-[32px] font-bold">23</p>
                     </li>
                     <li>
-                        <button class="bg-light-blue w-16 h-16 p-3 rounded-full cursor-pointer">
+                        <button class="w-16 h-16 p-3 rounded-full cursor-pointer bg-light-blue">
                             <img src="img/theme-btn.png" alt="">
                         </button>
                     </li>
                 </ul>
             </nav>
         </header>
-        <main class="container mx-auto rounded-2xl pt-5 flex gap-6 justify-between xl:flex-row flex-col">
+        <main class="container flex flex-col justify-between gap-6 pt-5 mx-auto rounded-2xl xl:flex-row">
             <div class="bg-white xl:w-3/4 rounded-2xl">
                 <div class="flex gap-6 justify-between px-6 pt-6 pb-8 border-b border-dashed border-[rgba(55,82,253,0.2)] lg:flex-row flex-col">
-                    <div class="lg:w-2/6 bg-light-blue rounded-xl sm:p-5 p-4 flex sm:gap-5 gap-2 items-center">
-                        <div class="w-16 h-16 bg-white rounded-full p-5">
+                    <div class="flex items-center gap-2 p-4 lg:w-2/6 bg-light-blue rounded-xl sm:p-5 sm:gap-5">
+                        <div class="w-16 h-16 p-5 bg-white rounded-full">
                             <img src="img/checkbox.png" alt="checkbox">
                         </div>
                         <div>
                             <p class="font-medium">Task Assigned</p>
-                            <h4 class="sm:text-3xl font-bold">05</h4>
+                            <h4 class="font-bold sm:text-3xl">05</h4>
                         </div>
                     </div>
                     <div class="lg:w-4/6 rounded-xl flex gap-2 sm:gap-6 items-center sm:px-10 px-4 py-5 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]">
@@ -61,15 +61,15 @@
                             <img src="img/board.png" alt="Board Icon">
                         </div>
                         <div>
-                            <p class="sm:text-2xl text-white">
+                            <p class="text-white sm:text-2xl">
                                 Discover Something
                                 <br>
                                 New Today!
                             </p>
                         </div>
                     </div>
-                    <div class="lg:w-2/6 bg-light-blue rounded-xl sm:p-5 p-3 flex sm:gap-5 gap-2 items-center">
-                        <div class="w-16 h-16 bg-white rounded-full p-5">
+                    <div class="flex items-center gap-2 p-3 lg:w-2/6 bg-light-blue rounded-xl sm:p-5 sm:gap-5">
+                        <div class="w-16 h-16 p-5 bg-white rounded-full">
                             <img src="img/calender.png" alt="Calendar Icon">
                         </div>
                         <div>
@@ -80,97 +80,97 @@
                         </div>
                     </div>
                 </div>
-                <div class="py-8 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-9">
-                    <div class="bg-light-blue p-6 rounded-2xl">
+                <div class="grid grid-cols-1 px-6 py-8 sm:grid-cols-2 lg:grid-cols-3 gap-9">
+                    <div class="p-6 bg-light-blue rounded-2xl">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
-                            <button class="bg-white rounded-lg px-4 py-2 mb-4 text-c00303C">ShopEase</button>
-                            <h3 class="text-2xl font-medium mb-4 text-c00303C">Fix Mobile Button Issue</h3>
+                            <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
                             <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
                         </div>
-                        <div class="pt-4 flex justify-between lg:items-center flex-col gap-2 md:flex-row">
+                        <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="text-c00303C font-medium">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
                             </div>
                             <div>
                                 <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light-blue p-6 rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
-                            <button class="bg-white rounded-lg px-4 py-2 mb-4 text-c00303C">ShopEase</button>
-                            <h3 class="text-2xl font-medium mb-4 text-c00303C">Fix Mobile Button Issue</h3>
+                            <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
                             <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
                         </div>
-                        <div class="pt-4 flex justify-between lg:items-center flex-col gap-2 md:flex-row">
+                        <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="text-c00303C font-medium">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
                             </div>
                             <div>
                                 <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light-blue p-6 rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
-                            <button class="bg-white rounded-lg px-4 py-2 mb-4 text-c00303C">ShopEase</button>
-                            <h3 class="text-2xl font-medium mb-4 text-c00303C">Fix Mobile Button Issue</h3>
+                            <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
                             <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
                         </div>
-                        <div class="pt-4 flex justify-between lg:items-center flex-col gap-2 md:flex-row">
+                        <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="text-c00303C font-medium">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
                             </div>
                             <div>
                                 <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light-blue p-6 rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
-                            <button class="bg-white rounded-lg px-4 py-2 mb-4 text-c00303C">ShopEase</button>
-                            <h3 class="text-2xl font-medium mb-4 text-c00303C">Fix Mobile Button Issue</h3>
+                            <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
                             <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
                         </div>
-                        <div class="pt-4 flex justify-between lg:items-center flex-col gap-2 md:flex-row">
+                        <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="text-c00303C font-medium">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
                             </div>
                             <div>
                                 <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light-blue p-6 rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
-                            <button class="bg-white rounded-lg px-4 py-2 mb-4 text-c00303C">ShopEase</button>
-                            <h3 class="text-2xl font-medium mb-4 text-c00303C">Fix Mobile Button Issue</h3>
+                            <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
                             <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
                         </div>
-                        <div class="pt-4 flex justify-between lg:items-center flex-col gap-2 md:flex-row">
+                        <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="text-c00303C font-medium">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
                             </div>
                             <div>
                                 <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-light-blue p-6 rounded-2xl">
+                    <div class="p-6 bg-light-blue rounded-2xl">
                         <div class="pb-4 border-b border-dashed border-[rgba(55,82,253,0.2)]">
-                            <button class="bg-white rounded-lg px-4 py-2 mb-4 text-c00303C">ShopEase</button>
-                            <h3 class="text-2xl font-medium mb-4 text-c00303C">Fix Mobile Button Issue</h3>
+                            <button class="px-4 py-2 mb-4 bg-white rounded-lg text-c00303C">ShopEase</button>
+                            <h3 class="mb-4 text-xl font-medium sm:text-2xl text-c00303C">Fix Mobile Button Issue</h3>
                             <p class="p-4 bg-white rounded-lg text-[#808080]">Debug using Chrome DevTools, check for overlapping issues..</p>
                         </div>
-                        <div class="pt-4 flex justify-between lg:items-center flex-col gap-2 md:flex-row">
+                        <div class="flex flex-col justify-between gap-2 pt-4 lg:items-center md:flex-row">
                             <div>
                                 <p class="text-sm text-c00303C">Deadline</p>
-                                <h4 class="text-c00303C font-medium">21 March 2025</h4>
+                                <h4 class="font-medium text-c00303C">21 March 2025</h4>
                             </div>
                             <div>
                                 <button class="bg-primary px-6 py-2.5 text-white rounded-lg font-medium cursor-pointer">Completed</button>
@@ -179,9 +179,9 @@
                     </div>
                 </div>
             </div>
-            <div class="xl:w-1/4 bg-white rounded-2xl">
+            <div class="bg-white xl:w-1/4 rounded-2xl">
                 <div class="pt-6 pb-3.5 text-center border-b border-dashed border-[rgba(55,82,253,0.2)]">
-                    <div class="flex justify-center pb-4 gap-4">
+                    <div class="flex justify-center gap-4 pb-4">
                         <div>
                             <img src="img/activity.png" alt="Activity Icon">
                         </div>
