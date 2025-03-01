@@ -41,23 +41,51 @@
             <section class="flex flex-col gap-5">
                 <div class="py-4 bg-white rounded-2xl">
                     <h2 class="pb-2 px-4 border-b border-dashed border-[rgba(55,82,253,0.2)] font-bold">Question-1: What are the different ways to select an element in the DOM?</h2>
-                    <p class="px-4 pt-2 pb-1 text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente cumque quia, ducimus rem ea obcaecati quam sit quo autem modi suscipit mollitia repellat dignissimos maxime et laborum, itaque aliquid voluptas quaerat aspernatur sed nam ipsum. Autem odit esse iste officiis magnam repellendus saepe dignissimos, necessitatibus delectus ratione dolor. Consequatur ut velit porro sit recusandae quasi</p>
+                    <p class="px-4 pt-2 text-gray-500">
+                        In JavaScript we can select elements in the DOM(Document Object Model) using various methods. Here are the ways:
+                    </p>
+                    <ul class="px-4 pt-2 pb-1 text-gray-500">
+                        <li>getElementById()</li>
+                        <li>getElementsByClassName()</li>
+                        <li>getElementsByTagName()</li>
+                        <li>querySelector()</li>
+                        <li>querySelectorAll()</li>
+                    </ul>
                 </div>
                 <div class="py-4 bg-white rounded-2xl">
                     <h2 class="pb-2 px-4 border-b border-dashed border-[rgba(55,82,253,0.2)] font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
-                    <p class="px-4 pt-2 pb-1 text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente cumque quia, ducimus rem ea obcaecati quam sit quo autem modi suscipit mollitia repellat dignissimos maxime et laborum, itaque aliquid voluptas quaerat aspernatur sed nam ipsum. Autem odit esse iste officiis magnam repellendus saepe dignissimos, necessitatibus delectus ratione dolor. Consequatur ut velit porro sit recusandae quasi</p>
+                    <p class="px-4 pt-2 pb-1 text-gray-500"> Difference Between innerHTML, innerText, and textContent in JavaScript</p>
+                    <p class="px-4 pt-2 pb-1 text-gray-500">1. innerHTML</p>
+                    <ul class="px-4 pb-1 text-gray-500">
+                        <li>Returns the entire HTML inside an element.</li>
+                        <li>Parses and executes any HTML tags inside the string.</li>
+                        <li>We can use it when we want to modify including HTML tags</li>
+                    </ul>
+                    <p class="px-4 pt-2 pb-1 text-gray-500">2. innerText</p>
+                    <ul class="px-4 pb-1 text-gray-500">
+                        <li>Returns only the text that is visible to the user.</li>
+                        <li>Ignores all HTML tags inside the element.</li>
+                        <li>Excludes hidden (display: none;) elements.</li>
+                    </ul>
+                    <p class="px-4 pt-2 pb-1 text-gray-500">3. textContent</p>
+                    <ul class="px-4 pb-1 text-gray-500">
+                        <li>Returns all text content, including hidden elements.</li>
+                        <li>Ignores all HTML tags.</li>
+                    </ul>
                 </div>
                 <div class="py-4 bg-white rounded-2xl">
                     <h2 class="pb-2 px-4 border-b border-dashed border-[rgba(55,82,253,0.2)] font-bold">Question-3: What is event delegation in the DOM?</h2>
-                    <p class="px-4 pt-2 pb-1 text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente cumque quia, ducimus rem ea obcaecati quam sit quo autem modi suscipit mollitia repellat dignissimos maxime et laborum, itaque aliquid voluptas quaerat aspernatur sed nam ipsum. Autem odit esse iste officiis magnam repellendus saepe dignissimos, necessitatibus delectus ratione dolor. Consequatur ut velit porro sit recusandae quasi</p>
+                    <p class="px-4 pt-2 pb-1 text-gray-500">Event delegation is to add event listener to the parent instead of adding event listeners to each individual child element. Inside the event handler, we use (event.target) to determine which child was clicked.</p>
                 </div>
                 <div class="py-4 bg-white rounded-2xl">
                     <h2 class="pb-2 px-4 border-b border-dashed border-[rgba(55,82,253,0.2)] font-bold">Question-4: What is event bubbling in the DOM?</h2>
-                    <p class="px-4 pt-2 pb-1 text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente cumque quia, ducimus rem ea obcaecati quam sit quo autem modi suscipit mollitia repellat dignissimos maxime et laborum, itaque aliquid voluptas quaerat aspernatur sed nam ipsum. Autem odit esse iste officiis magnam repellendus saepe dignissimos, necessitatibus delectus ratione dolor. Consequatur ut velit porro sit recusandae quasi</p>
+                    <p class="px-4 pt-2 pb-1 text-gray-500">Event Bubbling is a concept where an event starts from the target element and propagates up through its parent elements. basically when an event occurs on the child element, then it propagate up to parent and then the parent's parent</p>
                 </div>
                 <div class="py-4 bg-white rounded-2xl">
                     <h2 class="pb-2 px-4 border-b border-dashed border-[rgba(55,82,253,0.2)] font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
-                    <p class="px-4 pt-2 pb-1 text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus sapiente cumque quia, ducimus rem ea obcaecati quam sit quo autem modi suscipit mollitia repellat dignissimos maxime et laborum, itaque aliquid voluptas quaerat aspernatur sed nam ipsum. Autem odit esse iste officiis magnam repellendus saepe dignissimos, necessitatibus delectus ratione dolor. Consequatur ut velit porro sit recusandae quasi</p>
+                    <p class="px-4 pb-1 text-gray-500">1. To create and HTML Element: document.createElement(), example:document.createElement("p");</p>
+                    <p class="px-4 pb-1 text-gray-500">2. To add it in to the DOM we can use methods: appendChild(), prepend(), insertBefore(),innerHTML</p>
+                    <p class="px-4 pb-1 text-gray-500">2. To remove an element from the DOM, we can use methods: removeChild(),remove()</p>
                 </div>
             </section>
         </main>
