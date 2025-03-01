@@ -1,4 +1,3 @@
-// Navigate to the blog page
 const discoverNewToday = document.getElementById("discover-new-today");
 if (discoverNewToday) {
 	discoverNewToday.addEventListener("click", function () {
@@ -13,10 +12,9 @@ if (backToDesk) {
 	});
 }
 
-// changing background color of the click of color button
 function randomColor() {
 	let randomNumber = Math.floor(Math.random() * 256 * 256 * 256);
-	let hexString = randomNumber.toString(16);
+	let hexString = randomNumber.toString(16).padStart(6, "0");
 	return `#${hexString}`;
 }
 
@@ -24,7 +22,6 @@ document.getElementById("color-btn").addEventListener("click", function () {
 	document.body.style.backgroundColor = randomColor();
 });
 
-// task completion
 let taskAssigned = 6;
 let taskCompleted = 23;
 const taskCompletedEl = document.getElementById("task-completed");
@@ -34,7 +31,7 @@ const activityLogContainer = document.getElementById("activity-log-message-conta
 
 function getCurrentTime() {
 	const now = new Date();
-	return now.toLocaleTimeString({ hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true });
+	return now.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true });
 }
 
 if (taskCompletedItems) {
@@ -46,9 +43,10 @@ if (taskCompletedItems) {
 					taskAssigned--;
 					taskCompleted++;
 				}
-
-				taskAssignedEl.textContent = taskAssigned;
-				taskCompletedEl.textContent = taskCompleted;
+				if (taskAssignedEl && taskCompletedEl) {
+					taskAssignedEl.textContent = taskAssigned;
+					taskCompletedEl.textContent = taskCompleted;
+				}
 
 				let taskTitle = this.closest(".task-col").querySelector(".task-title").textContent;
 
@@ -67,7 +65,6 @@ if (taskCompletedItems) {
 	}
 }
 
-// clear task log
 const clearTaskLogBtn = document.getElementById("clear-task-log-btn");
 if (clearTaskLogBtn) {
 	clearTaskLogBtn.addEventListener("click", function () {
@@ -75,7 +72,6 @@ if (clearTaskLogBtn) {
 	});
 }
 
-// to show current date and day
 function todaysDate() {
 	const today = new Date();
 	let dayFormat = { weekday: "short" };
